@@ -1,0 +1,45 @@
+#include<stdio.h>
+int addition(int a,int b){
+	int result;
+	result = a+b;
+	return result;
+}
+int subtraction(int a,int b){
+	int result;
+	result = a-b;
+	return result;
+}
+int multiplication(int a,int b){
+	int result;
+	result = a*b;
+	return result;
+}
+int division(int a,int b){
+	int result;
+	result = a/b;
+	return result;
+}
+int main(){
+	int x,y,choice,answer;
+	printf("Enter 1 for Addition \nEnter 2 for Subtraction \nEnter 3 for Multiplication \nEnter 4 for Division \n");
+	printf("Enter your choice : ");
+	scanf("%d",&choice);
+	printf("Enter two value : ");
+	scanf("%d %d",&x,&y);
+	if(choice == 1){
+		answer = addition(x,y);
+		printf("The Addition of %d and %d is %d",x,y,answer);
+	}else if(choice == 2){
+		answer = subtraction(x,y);
+		printf("The Subtraction of %d and %d is %d",x,y,answer);
+	}else if(choice == 3){
+		answer = multiplication(x,y);
+		printf("The Multiplication of %d and %d is %d",x,y,answer);
+	}else if(choice == 4){
+		answer = division(x,y);
+		printf("The Division of %d and %d is %d",x,y,answer);
+	}else{
+		printf("Invalid chioce!!");
+	}
+return 0;
+}
